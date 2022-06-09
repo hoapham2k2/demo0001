@@ -35,9 +35,20 @@ namespace WindowsFormsApp4
             InitializeComponent();
         }
 
+        public Form2(MaterialSkinManager x)
+        {
+
+           
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = x.Theme;
+            materialSkinManager.ColorScheme = x.ColorScheme;
+            InitializeComponent();
+        }
+
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form1 frm = new Form1(checkNum01);
+            Form1 frm = new Form1(MaterialSkinManager.Instance);
             frm.Show();
             this.Hide();
         }
@@ -81,7 +92,9 @@ namespace WindowsFormsApp4
 
         private void materialButton1_Click_1(object sender, EventArgs e)
         {
-
+            Form3 frm = new Form3(MaterialSkinManager.Instance);
+                frm.Show();
+            this.Dispose();
         }
         //private void button1_Click(object sender, EventArgs e)
         //{

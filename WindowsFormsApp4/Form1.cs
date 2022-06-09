@@ -39,7 +39,7 @@ namespace WindowsFormsApp4
         public void btnClick(object Sender, EventArgs e)
         {
             MessageBox.Show("Hello World!!!");
-            Form2 frm = new Form2(a);
+            Form2 frm = new Form2(materialSkinManager);
             frm.Show();
             this.Hide();
         }
@@ -70,12 +70,14 @@ namespace WindowsFormsApp4
 
         }
 
+        MaterialSkinManager mainSkinmanager = MaterialSkinManager.Instance;
+
         public Form1()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            mainSkinmanager.AddFormToManage(this);
+            mainSkinmanager.Theme = MaterialSkinManager.Themes.LIGHT;
+            mainSkinmanager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
             InitializeComponent();
             initDashBoard();
 
@@ -99,7 +101,17 @@ namespace WindowsFormsApp4
             InitializeComponent();
             initDashBoard();
            
+        }
 
+        public Form1(MaterialSkinManager x)
+        {
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = x.Theme;
+            materialSkinManager.ColorScheme = x.ColorScheme;
+            
+            InitializeComponent();
+            initDashBoard();
 
         }
         MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
@@ -174,6 +186,10 @@ namespace WindowsFormsApp4
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
         }
     }
 }

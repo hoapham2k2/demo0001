@@ -49,6 +49,12 @@
             this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.anhIcon = new System.Windows.Forms.ImageList(this.components);
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.materialMultiLineTextBox21 = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -56,6 +62,9 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.materialTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -64,15 +73,20 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "home_32px.png");
             this.imageList1.Images.SetKeyName(1, "settings_32px.png");
+            this.imageList1.Images.SetKeyName(2, "Favorite_32px.png");
+            this.imageList1.Images.SetKeyName(3, "historical_32px.png");
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.flowLayoutPanel3);
+            this.tabPage3.ImageKey = "Favorite_32px.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1323, 650);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Favourite";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage2
             // 
@@ -97,7 +111,7 @@
             // 
             this.materialRadioButton3.AutoSize = true;
             this.materialRadioButton3.Depth = 0;
-            this.materialRadioButton3.Location = new System.Drawing.Point(215, 290);
+            this.materialRadioButton3.Location = new System.Drawing.Point(215, 225);
             this.materialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -126,7 +140,7 @@
             // 
             this.materialRadioButton2.AutoSize = true;
             this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Location = new System.Drawing.Point(215, 238);
+            this.materialRadioButton2.Location = new System.Drawing.Point(215, 173);
             this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -159,7 +173,7 @@
             // 
             this.materialRadioButton1.AutoSize = true;
             this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Location = new System.Drawing.Point(215, 187);
+            this.materialRadioButton1.Location = new System.Drawing.Point(215, 122);
             this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -177,7 +191,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(64, 197);
+            this.materialLabel2.Location = new System.Drawing.Point(64, 132);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(99, 19);
@@ -243,6 +257,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.materialMultiLineTextBox21);
             this.panel2.Controls.Add(this.materialComboBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -282,8 +298,9 @@
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.tabPage1);
-            this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Controls.Add(this.tabPage3);
+            this.materialTabControl1.Controls.Add(this.tabPage4);
+            this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
@@ -303,6 +320,72 @@
             this.anhIcon.Images.SetKeyName(0, "harry_potter_and_the_chamber_of_secrets__j_k_rowling.jpg");
             this.anhIcon.Images.SetKeyName(1, "harry_potter_and_the_deathly_hallows__j_k_rowling.jpg");
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1323, 650);
+            this.flowLayoutPanel3.TabIndex = 0;
+            // 
+            // materialMultiLineTextBox21
+            // 
+            this.materialMultiLineTextBox21.AnimateReadOnly = false;
+            this.materialMultiLineTextBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.materialMultiLineTextBox21.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.materialMultiLineTextBox21.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialMultiLineTextBox21.Depth = 0;
+            this.materialMultiLineTextBox21.HideSelection = true;
+            this.materialMultiLineTextBox21.Hint = "Search by name";
+            this.materialMultiLineTextBox21.Location = new System.Drawing.Point(598, 0);
+            this.materialMultiLineTextBox21.MaxLength = 32767;
+            this.materialMultiLineTextBox21.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialMultiLineTextBox21.Name = "materialMultiLineTextBox21";
+            this.materialMultiLineTextBox21.PasswordChar = '\0';
+            this.materialMultiLineTextBox21.ReadOnly = false;
+            this.materialMultiLineTextBox21.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.materialMultiLineTextBox21.SelectedText = "";
+            this.materialMultiLineTextBox21.SelectionLength = 0;
+            this.materialMultiLineTextBox21.SelectionStart = 0;
+            this.materialMultiLineTextBox21.ShortcutsEnabled = true;
+            this.materialMultiLineTextBox21.Size = new System.Drawing.Size(398, 60);
+            this.materialMultiLineTextBox21.TabIndex = 2;
+            this.materialMultiLineTextBox21.TabStop = false;
+            this.materialMultiLineTextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.materialMultiLineTextBox21.UseSystemPasswordChar = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1002, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dataGridView1);
+            this.tabPage4.ImageKey = "historical_32px.png";
+            this.tabPage4.Location = new System.Drawing.Point(4, 39);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1323, 650);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "History";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1323, 650);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,13 +394,13 @@
             this.Controls.Add(this.materialTabControl1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
-            this.DrawerUseColors = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "HBBookShop";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.tabPage3.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
@@ -325,7 +408,11 @@
             this.panel3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.materialTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,6 +437,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 materialMultiLineTextBox21;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
